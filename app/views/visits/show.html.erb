@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date visited:</b>
+  <%= @visit.date_visited %>
+</p>
+
+<p>
+  <b>Spent:</b>
+  <%= @visit.spent %>
+</p>
+
+
+<%= link_to 'Edit', edit_visit_path(@visit) %> |
+<%= link_to 'Back', visits_path %>

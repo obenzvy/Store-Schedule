@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_visited: 2012-11-05
+  spent: 1.5
+
+two:
+  date_visited: 2012-11-05
+  spent: 1.5

@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Store:</b>
+  <%= @store.store %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @store.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @store.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @store.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @store.zipcode %>
+</p>
+
+<p>
+  <b>Latitude</b>
+  <%= @store.latitude %>
+</p>
+
+<p>
+  <b>Longitude</b>
+  <%= @store.longitude %>
+</p>
+
+
+<h3>Nearby Locations</h3>
+<ul>
+<% for location in @store.nearbys(1000) %>
+  <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+</br>
+</br>
+<%= gmaps4rails(@json) %>
+</br>
+</br>
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>
